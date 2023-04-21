@@ -1,0 +1,75 @@
+@use '../../../assets/sccs/functions' as f;
+@use '../../../assets/sccs/mixins' as m;
+
+.button {
+    font-weight: 600;
+    letter-spacing: 0.0125rem;
+    text-transform: uppercase;
+    background: #0000;
+    border: none;
+
+    @include m.dark-shadow;
+
+    &:hover {
+       box-shadow: 0 2px 5px #36363619;
+    }
+
+    &:active {
+        box-shadow: 0 3px 4px rgba(222, 125, 11, 0.2),
+                    0 1px 10px rgba(249, 89, 8, 0.2) !important;
+    }
+
+    &:disabled {
+        cursor: default;
+        background: #EBEBEB;
+        color: white;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    &_active {
+        color: white;
+        background: f.color(orange-gradient);
+
+        @include m.dark-shadow();
+
+        path {
+            fill: white;
+        }
+
+        &:hover,
+        &:active {
+            @include m.dark-shadow();
+        }
+    }
+
+    &_primary {
+        color: #FFF;
+        background: f.color(orange-gradient);
+
+        &:hover {
+            border: 1px solid #FF740F;
+        }
+    }
+
+    &_secondary {
+        color: f.color(main-dark);
+        box-shadow: none;
+        border: 1px solid f.color(grey-black20);
+
+        &:hover {
+            border-color: f.color(grey-black40);
+            box-shadow: 0 2px 5px #36363619;
+        }
+
+        &:active {
+            border-color: f.color(grey-black20);
+        }
+
+        &:disabled {
+            color: f.color(grey-black40);
+            background: f.color(grey-black5);
+            border: 1px solid f.color(grey-black20) !important;
+        }
+    }
+}

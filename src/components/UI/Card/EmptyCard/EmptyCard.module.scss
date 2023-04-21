@@ -1,0 +1,14 @@
+@use '../../../../assets/sccs/mixins' as m;
+
+.empty-card {
+    background: #6E76F1;
+    height: 11.375rem;
+
+    @include m.media(md) {
+        height: 12.75rem;
+    }
+
+    @include m.media(xxl) {
+        height: 13.625rem;
+    }
+}

@@ -1,0 +1,154 @@
+@use '../../../../assets/sccs/mixins' as m;
+@use '../../../../assets/sccs/functions' as f;
+
+.tools-menu {
+    margin-bottom: 1.1875rem;
+    display: flex;
+
+    @include m.media(md) {
+        margin-bottom: 1.5rem;
+    }
+
+    @include m.media(xxl) {
+        margin-bottom: 2rem;
+    }
+
+    &__input-container {
+        width: 100%;
+        padding: 0 1rem;
+        border-radius: 1.875rem;
+        display: flex;
+
+        @include m.dark-shadow;
+
+        @include m.media(md) {
+            width: 17.125rem;
+            height: 2.375rem;
+
+            margin-right: 1.05625rem;
+            display: flex;
+            align-items: center;
+        }
+
+        @include m.media(xxl) {
+            width: 21.875rem;
+        }
+
+        &_invisible {
+            width: auto;
+            padding: 0;
+            box-shadow: none;
+        }
+    }
+
+    &__input {
+        caret-color: #F83600;
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+        flex: 1 1 auto;
+
+        @include m.media(md) {
+            font-size: 0.875rem;
+        }
+
+        &_invisible {
+            display: none;
+        }
+
+        &::placeholder {
+            color: f.color(grey-black40);
+        }
+    }
+
+    &__button {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include m.media(md) {
+            width: 2.375rem;
+            height: 2.375rem;
+        }
+
+        &_type {
+            &_search {
+                margin-right: 1rem;
+
+                @include m.media(md) {
+                    box-shadow: none !important;
+                    width: auto;
+                    height: auto;
+                    margin-right: 0.5rem;
+                }
+            }
+
+            &_rating {
+                @include m.media(md) {
+                    width: auto;
+                    height: auto;
+                    padding: 0 0.94375rem;
+                    border-radius: 1.875rem;
+                }
+            }
+
+            &_window-switcher {
+                margin-left: auto;
+                margin-right: 1rem;
+            }
+        }
+
+        &_invisible {
+            display: none;
+        }
+    }
+
+    &__text {
+        display: none;
+
+        @include m.media(md) {
+            color: f.color(grey-black40);
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.125rem;
+            text-transform: none;
+            display: inline;
+        }
+    }
+
+    &__icon {
+        width: 1rem;
+        height: 1rem;
+
+        path {
+            fill: f.color(grey-black40);
+        }
+
+        &_type {
+            &_rating {
+                @include m.media(md) {
+                    margin-right: 0.5rem;
+                }
+            }
+
+            &_switcher {
+                @include m.media(md) {
+                    width: 1.1875rem;
+                    height: 1.1875rem;
+                }
+            }
+        }
+
+        &_reversed {
+            transform: scale(1, -1);
+        }
+
+        &_active {
+            path {
+                fill: url(#paint1_linear_20511_3410);
+            }
+        }
+    }
+}

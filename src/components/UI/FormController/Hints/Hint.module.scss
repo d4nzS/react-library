@@ -1,0 +1,10 @@
+@use '../../../../assets/sccs/functions' as f;
+
+.hint {
+    margin-top: 0.125rem;
+    color: f.color(grey-black40);
+
+    &__error {
+        color: f.color(main-red);
+    }
+}

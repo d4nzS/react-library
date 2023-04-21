@@ -1,0 +1,27 @@
+@use '../../../assets/sccs/mixins' as m;
+
+.loader {
+    width: 1.375rem;
+    height: 1.375rem;
+    animation: rotation 1s linear infinite;
+
+    @include m.media(md) {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    @include m.media(xxl) {
+        width: 4.296875rem;
+        height: 4.296875rem;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

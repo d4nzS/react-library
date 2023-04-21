@@ -1,0 +1,11 @@
+@use 'vars' as v;
+
+@function color($key) {
+    @if map-has-key(v.$colors, $key) {
+        @return map-get(v.$colors, $key);
+    }
+
+    @warn 'Unknown #{$key} in $colors';
+
+    @return inherit;
+}

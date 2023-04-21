@@ -1,0 +1,45 @@
+@use '../../../assets/sccs/mixins' as m;
+@use '../../../assets/sccs/functions' as f;
+
+.login {
+    margin-top: 0.75rem;
+
+    @include m.media(md) {
+        margin-top: 7.0625rem;
+    }
+
+    @include m.media(xxl) {
+        margin-top: 3.6875rem;
+    }
+
+    &_type_response {
+        margin-top: 7.8125rem;
+
+        @include m.media(md) {
+            margin-top: 9.9375rem;
+        }
+    }
+
+    &__link {
+        color: f.color(grey-black40);
+
+        &_type_with-response {
+            color: f.color(main-dark);
+        }
+    }
+
+    &__error {
+        color: f.color(main-red);
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 2.25rem;
+
+        @include m.style-primary-btn();
+
+        @include m.media(md) {
+            margin-top: 2rem;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.swiper-mini {
+    margin-top: 1.0625rem;
+
+    .swiper-wrapper {
+        width: fit-content;
+    }
+
+    &__image {
+        cursor: pointer;
+        width: 4.0625rem;
+        height: 5.375rem;
+        margin: 0 auto;
+    }
+
+    .swiper-slide-thumb-active {
+        img {
+            border: 1px solid #F83600;
+            border-radius: 3px;
+        }
+    }
+}

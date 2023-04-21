@@ -1,0 +1,17 @@
+@use '../../../../../assets/sccs/functions' as f;
+
+.picker {
+    cursor: pointer;
+    appearance: none;
+    background-color: white;
+    background-image: url('../../../../../assets/icons/dropdown-icon.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    color: f.color(grey-black40);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 8.5rem;
+    border: none;
+    outline: none;
+    margin-left: 0.5rem;
+}

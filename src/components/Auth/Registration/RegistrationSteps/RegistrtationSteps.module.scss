@@ -1,0 +1,27 @@
+@use '../../../../assets/sccs/functions' as f;
+@use '../../../../assets/sccs/mixins' as m;
+
+.form {
+    &__button {
+        width: 100%;
+        margin-top: 2.25rem;
+
+        @include m.style-primary-btn();
+
+        @include m.media(md) {
+            margin-top: 2rem;
+        }
+
+        &_mode_onchange {
+            margin-top: 1.5rem;
+
+            @include m.media(md) {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+.registration-step_invisible {
+    display: none;
+}

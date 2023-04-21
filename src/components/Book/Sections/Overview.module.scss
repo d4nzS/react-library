@@ -1,0 +1,131 @@
+@use '../../../assets/sccs/mixins' as m;
+@use '../../../assets/sccs/functions' as f;
+
+.overview {
+    margin-bottom: 2.625rem;
+
+    @include m.media(md) {
+        margin-bottom: 3.25rem;
+        display: grid;
+        grid-template-columns: 8.5rem 1fr;
+        grid-gap: 3rem 2rem;
+        grid-template-areas: 'image-container grid-item'
+                                 'description description';
+    }
+
+    @include m.media(xxl) {
+        margin-bottom: 2.625rem;
+        grid-template-columns: 27.8125rem 1fr;
+        grid-gap: 0 1.875rem;
+        grid-template-areas: 'image-container grid-item'
+                                 'image-container description'
+                                 'image-container .'
+    }
+
+    &__grid-item {
+        @include m.media(md) {
+            grid-area: grid-item;
+        }
+    }
+
+    &__image-container {
+        @include m.media(md) {
+            grid-area: image-container;
+        }
+    }
+
+    &__image {
+        width: 11.75rem;
+        height: 16.2225rem;
+        border-radius: 0.625rem;
+        margin: 0 auto 1.0275rem;
+
+        @include m.media(md) {
+            width: 100%;
+            height: 12.375rem;
+            border-radius: 0.1875rem;
+            margin: 0;
+        }
+
+        @include m.media(xxl) {
+            height: 37.0625rem;
+            border-radius: 0.625rem;
+        }
+    }
+
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+
+        @include m.media(md) {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        @include m.media(xxl) {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-bottom: 0.5rem;
+
+        @include m.media(md) {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+            margin-bottom: 2rem;
+        }
+
+        @include m.media(xxl) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__span {
+        color: f.color(grey-black40);
+        font-size: 0.75rem;
+        margin-bottom: 2.625rem;
+        display: inline-block;
+
+        @include m.media(md) {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        @include m.media(xxl) {
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin-bottom: 2.625rem;
+
+        @include m.media(md) {
+            width: 19.125rem;
+            margin-bottom: 0;
+        }
+
+        @include m.media(xxl) {
+            width: 21.875rem;
+            margin-bottom: 3.875rem;
+        }
+    }
+
+    &__description {
+        font-size: 0.75rem;
+
+        @include m.media(md) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            grid-area: description;
+        }
+    }
+}

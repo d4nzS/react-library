@@ -1,0 +1,96 @@
+@use 'assets/sccs/fonts';
+@use 'assets/sccs/functions' as f;
+@use 'assets/sccs/mixins' as m;
+
+:root {
+    --swiper-theme-color: #363636 !important;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ol {
+    counter-reset: item;
+
+    li:before {
+        content: counters(item, '.') '. ';
+        counter-increment: item;
+    }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+hr {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    padding: 0;
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: inherit;
+    border: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+body {
+    height: 100%;
+    justify-content: center;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
+    color: #363636;
+    letter-spacing: 0.00625rem;
+}

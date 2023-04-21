@@ -1,0 +1,1 @@
+export const HIDE_RESPONSE_DURATION = 4000;

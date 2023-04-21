@@ -1,0 +1,39 @@
+@use '../../../assets/sccs/functions' as f;
+@use '../../../assets/sccs/mixins' as m;
+
+.auth-form-wrapper {
+    &__title {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+
+    &__account-container {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.4375rem 1rem;
+    }
+
+    &__span {
+        color: f.color(grey-black70);
+        font-size: 0.9375rem;
+        line-height: 1.25rem;
+        display: inline-block;
+
+        @include m.media(md) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    &__link {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.0125rem;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+}

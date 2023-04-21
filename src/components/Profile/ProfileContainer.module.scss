@@ -1,0 +1,16 @@
+@use '../../assets/sccs/mixins' as m;
+
+.profile-container {
+    margin: 3.5rem 0 2rem;
+    min-height: calc(100vh - 15.575rem);
+
+    @include m.media(md) {
+        margin: 3.5rem 0 3.875rem;
+        min-height: calc(100vh - 15.7rem);
+    }
+
+    @include m.media(xxl) {
+        margin: 3.875rem 0 3.875rem;
+        min-height: calc(100vh - 17.2rem);
+    }
+}

@@ -1,0 +1,22 @@
+@use '../../../assets/sccs/mixins' as m;
+
+.auth-modal {
+    background: white;
+    padding: 1.5rem 1rem 1.6875rem;
+    border-radius: 1rem;
+
+    @include m.media(md) {
+        width: 33rem;
+        padding: 3rem 3.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &_type_response {
+        @include m.media(md) {
+            width: 37.5rem;
+            padding-left: 5.9375rem;
+            padding-right: 5.9375rem;
+        }
+    }
+}

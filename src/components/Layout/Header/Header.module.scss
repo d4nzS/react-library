@@ -1,0 +1,92 @@
+@use '../../../assets/sccs/mixins' as m;
+
+.header {
+    display: flex;
+    align-items: center;
+
+    @include m.media(xxl) {
+        position: relative;
+    }
+
+    &__button {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1.5rem;
+
+        @include m.media(md) {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        @include m.media(xxl) {
+            display: none;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__logo {
+        display: none;
+
+        @include m.media(xxl) {
+            height: 2.5rem;
+            margin-right: 7.5rem;
+            display: block;
+        }
+    }
+
+    &__title {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+
+        @include m.media(md) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    &__user-info {
+        cursor: pointer;
+        display: none;
+
+        @include m.media(xxl) {
+            font-weight: 600;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__avatar {
+        width: 3.625rem;
+        height: 3.625rem;
+        border-radius: 50%;
+        margin-left: 1rem;
+
+        @include m.dark-shadow;
+    }
+
+    &__nav {
+        @include m.media(xxl) {
+            background: white;
+            font-size: 1.125rem;
+            font-weight: 700;
+            line-height: 1.75rem;
+            box-shadow: 4px 4px 4px rgba(54, 54, 54, 0.05), -4px 4px 4px rgba(54, 54, 54, 0.05);
+            width: 16.875rem;
+            padding: 2rem 1.5rem 2rem 0;
+            border-radius: 0 0 0.625rem 0.625rem;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2rem;
+            position: absolute;
+            bottom: calc(-9.5rem - 0.875rem);
+            right: 0;
+            z-index: 10;
+        }
+    }
+}

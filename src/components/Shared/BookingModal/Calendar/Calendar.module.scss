@@ -1,0 +1,91 @@
+@use '../../../../assets/sccs/functions' as f;
+@use '../../../../assets/sccs/mixins' as m;
+
+.calendar {
+    color: f.color(grey-black40);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.0125rem;
+    padding: 1rem 1rem 0;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+
+    @include m.dark-shadow;
+
+    &__caption {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__button {
+        height: 1rem;
+
+        &_first {
+            margin-left: auto;
+            margin-right: 0.75rem;
+        }
+    }
+
+    &__icon {
+        width: 1rem;
+        height: 1rem;
+
+        path {
+            fill: f.color(main-dark);
+        }
+
+        &_reversed {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__table {
+        border-spacing: 0;
+    }
+
+    &__cell {
+        cursor: default;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle;
+
+        &_available {
+            cursor: pointer;
+            color: f.color(main-dark);
+
+            &:hover {
+                border: 1px solid f.color(grey-black20);
+            }
+        }
+
+        &_type {
+            &_header {
+                font-weight: 500;
+
+                @include m.orange-gradient-text;
+            }
+
+            &_weekend {
+                color: f.color(grey-black40);
+                background-color: f.color(pink-red20);
+            }
+
+            &_today {
+                color: #F83600;
+            }
+        }
+
+        &_selected {
+            color: white;
+            background: f.color(orange-gradient);
+
+            &:hover {
+                border: none;
+            }
+        }
+    }
+}

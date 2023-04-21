@@ -1,0 +1,19 @@
+@use '../../../../assets/sccs/mixins' as m;
+
+.swiper {
+    > div:first-child {
+        margin-bottom: 2.75rem;
+    }
+}
+
+.slide {
+    height: auto;
+
+    @include m.media(md) {
+        width: 11.875rem;
+    }
+
+    @include m.media(xxl) {
+        width: 15.9375rem;
+    }
+}

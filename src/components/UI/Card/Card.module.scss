@@ -1,0 +1,17 @@
+@use '../../../assets/sccs/mixins' as m;
+
+.card {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    backdrop-filter: blur(10px);
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+
+    @include m.media(md) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        padding: 1rem;
+    }
+}

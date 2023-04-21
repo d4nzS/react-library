@@ -1,0 +1,44 @@
+@use '../../../assets/sccs/mixins' as m;
+
+.rating {
+    margin-bottom: 1.765625rem;
+
+    @include m.media(md) {
+        margin-bottom: 3.5625rem;
+    }
+
+    @include m.media(xxl) {
+        margin-bottom: 4.1875rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__rating-stars-container {
+        width: 13.229375rem;
+        margin-right: 1.699375rem;
+
+        @include m.media(md) {
+            width: 10.25rem;
+            margin-right: 1.625rem;
+        }
+    }
+
+    &__icon {
+        width: 1.726875rem;
+        height: 1.66rem;
+
+        @include m.media(md) {
+            width: 1.25rem;
+            height: 1.1875rem;
+        }
+    }
+
+    &__span {
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.75rem;
+    }
+}

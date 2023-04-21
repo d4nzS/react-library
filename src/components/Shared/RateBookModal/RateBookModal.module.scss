@@ -1,0 +1,47 @@
+@use '../../../assets/sccs/functions' as f;
+@use '../../../assets/sccs/mixins' as m;
+
+.rate-book-modal {
+    &__rating-title {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+    }
+
+    &__rating {
+        width: 12.666875rem;
+        height: 1.583125rem;
+        margin: 1.166875rem auto 1.75rem;
+
+        @include m.media(md) {
+            width: 15.6875rem;
+            height: 2.078125rem;
+            margin: 1.21875rem auto 2.328125rem;
+        }
+    }
+
+    &__rating-star {
+        cursor: pointer;
+        width: 1.666875rem;
+
+        @include m.media(md) {
+            width: 2.1875rem;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        background: f.color(grey-black5);
+        width: 100%;
+        height: 8.25rem;
+        padding: 1.1875rem 0.75rem;
+        border: none;
+        border-radius: 0.25rem;
+        outline: none;
+        margin-bottom: 3.25rem;
+
+        &::placeholder {
+            color: f.color(grey-black40);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use '../../assets/sccs/functions' as f;
+@use '../../assets/sccs/mixins' as m;
+
+.auth-layout {
+    background: f.color(orange-gradient);
+    min-height: 100vh;
+    padding: 1rem 1rem 0;
+
+    @include m.media(md) {
+        padding-top: 11.25rem;
+    }
+
+    &__title {
+        color: white;
+        line-height: 1.75rem;
+        text-align: center;
+
+        @include m.media(md) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+}

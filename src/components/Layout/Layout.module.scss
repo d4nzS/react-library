@@ -1,0 +1,16 @@
+@use '../../assets/sccs/mixins' as m;
+
+.layout {
+    padding: 1.5rem 1rem 0.5rem;
+
+    @include m.media(md) {
+        padding: 2rem 4rem 1rem;
+    }
+
+    @include m.media(xxl) {
+        max-width: 69.375rem;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+    }
+}

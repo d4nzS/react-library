@@ -1,0 +1,12 @@
+@use '../../../assets/sccs/functions' as f;
+
+.image {
+    border: 1px solid f.color(grey-black40);
+
+    &_type_default {
+        background: f.color(grey-black5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

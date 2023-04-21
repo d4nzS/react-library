@@ -1,0 +1,58 @@
+@use '../../assets/sccs/mixins' as m;
+@use '../../assets/sccs/functions' as f;
+
+.book-container {
+    min-height: calc(100vh - 20.325rem);
+    margin: 9rem 0 1.25rem;
+
+    @include m.media(md) {
+        min-height: calc(100vh - 22.7rem);
+        margin: 11.375rem 0 3rem;
+    }
+
+    @include m.media(xxl) {
+        min-height: calc(100vh - 21.325rem);
+        margin: 9.25rem 0 2.625rem;
+    }
+}
+
+.nav {
+    background: f.color(grey-black5);
+    color: f.color(grey-black40);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1rem;
+    letter-spacing: 0.0125rem;
+    width: 100%;
+    padding: 1.25rem 1rem;
+    position: absolute;
+    top: 5.25rem;
+    left: 0;
+
+    @include m.media(md) {
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        letter-spacing: 0.00625rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        top: 7.375rem;
+    }
+
+    @include m.media(xxl) {
+        padding: 1.4375rem calc((100% - 69.375rem) / 2);
+        top: 8.25rem
+    }
+
+    &__icon {
+        margin: 0 0.25rem;
+        vertical-align: middle;
+        width: 1rem;
+        height: 1rem;
+
+        @include m.media(md) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}

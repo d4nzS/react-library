@@ -1,0 +1,43 @@
+@use '../../../../assets/sccs/functions' as f;
+@use '../../../../assets/sccs/mixins' as m;
+
+.books {
+    &__title {
+        color: f.color(grey-black40);
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        text-align: center;
+        margin-top: 8.5625rem;
+
+        @include m.media(md) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            margin-top: 14.125rem;
+        }
+
+        @include m.media(xxl) {
+            margin-top: 12.5rem;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-gap: 1rem 0.5rem;
+
+        @include m.media(md) {
+            grid-template-columns: repeat(auto-fill, 11.875rem);
+            grid-row-gap: 2rem;
+            justify-content: space-between;
+        }
+
+        @include m.media(xxl) {
+            grid-row-gap: 1.5rem;
+        }
+
+        &_type_list {
+            grid-row-gap: 1rem;
+            grid-template-columns: auto;
+            justify-content: stretch;
+        }
+    }
+}

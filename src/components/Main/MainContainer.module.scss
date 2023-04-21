@@ -1,0 +1,17 @@
+@use '../../assets/sccs/mixins' as m;
+
+.main-container {
+    min-height: calc(100vh - 15.475rem);
+    margin: 1.5rem 0 3.875rem;
+    display: flex;
+
+    @include m.media(md) {
+        min-height: calc(100vh - 15.575rem);
+        margin-top: 3.375rem;
+    }
+
+    @include m.media(xxl) {
+        min-height: calc(100vh - 17.2125rem);
+        margin-top: 3.875rem;
+    }
+}

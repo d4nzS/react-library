@@ -1,0 +1,41 @@
+@use '../../../assets/sccs/mixins' as m;
+
+.registration {
+    margin-top: 0.5rem;
+
+    @include m.media(md) {
+        margin-top: 2.875rem;
+    }
+
+    &_type {
+        &_success-response {
+            margin-top: 6.5625rem;
+
+            @include m.media(md) {
+                margin-top: 9.1875rem;
+            }
+        }
+
+        &_400-error-response {
+            margin-top: 6.5625rem;
+
+            @include m.media(md) {
+                margin-top: 8.4375rem;
+            }
+        }
+
+        &_not-400-error-response {
+            margin-top: 7.1875rem;
+
+            @include m.media(md) {
+                margin-top: 9.1875rem;
+            }
+        }
+    }
+
+    &__span {
+        font-weight: 600;
+        margin-top: 0.5rem;
+        display: block;
+    }
+}

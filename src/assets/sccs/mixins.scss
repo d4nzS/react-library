@@ -1,0 +1,39 @@
+@use 'vars' as v;
+@use 'functions' as f;
+
+@mixin media($breakpoint) {
+    @if map-has-key(v.$breakpoints, $breakpoint) {
+        @media (min-width: map-get(v.$breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @warn 'Unknown #{$breakpoint} in $breakpoints';
+    }
+}
+
+@mixin dark-shadow() {
+    box-shadow: 0 2px 4px #BFC4C933, 0 3px 4px #BFC4C92D, 0 1px 5px #BFC4C93D;
+}
+
+@mixin style-primary-btn($with-big-version: true) {
+    font-size: 0.75rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+
+    @if $with-big-version {
+        @include media(md) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            height: 3.25rem;
+            border-radius: 1.875rem;
+        }
+    }
+}
+
+@mixin orange-gradient-text {
+    background-image: f.color(orange-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}

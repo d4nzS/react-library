@@ -1,0 +1,45 @@
+@use '../../../assets/sccs/mixins' as m;
+@use '../../../assets/sccs/functions' as f;
+
+.title {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+
+    @include m.media(md) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    @include m.media(xxl) {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+}
+
+.horizontal-line {
+    color: f.color(grey-black5);
+    background: f.color(grey-black5);
+    width: 18rem;
+    height: 1px;
+    border: none;
+    margin: 0.5rem 0;
+
+    @include m.media(md) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        width: 19.0625rem;
+        margin: 1rem 0;
+    }
+
+    @include m.media(xxl) {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 21.875rem;
+    }
+}
+
+.button {
+    display: block;
+
+    @include m.style-primary-btn();
+}
