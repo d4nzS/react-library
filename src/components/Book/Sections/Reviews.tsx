@@ -6,7 +6,6 @@ import sectionClasses from './Section.module.scss';
 import { Comment } from '../../../models/book'
 import { getCurrentUserId } from '../../../utils/auth';
 import { ReactComponent as ToggleIcon } from '../../../assets/icons/toggle-icon.svg';
-import { HOST_URL } from '../../../api';
 import defaultAvatarImg from '../../../assets/images/default-avatar.png';
 import RatingStars from '../../UI/RatingStars/RatingStars';
 import Button from '../../UI/Button/Button';
@@ -79,7 +78,7 @@ const Reviews: FC<ReviewsProps> = ({
                                 <div className={classes.reviews__header}>
                                     <img
                                         src={comment.user.avatarUrl
-                                            ? `${HOST_URL}${comment.user.avatarUrl}`
+                                            ? comment.user.avatarUrl
                                             : defaultAvatarImg}
                                         alt="AuthResponse Avatar"
                                         className={classes.reviews__image}

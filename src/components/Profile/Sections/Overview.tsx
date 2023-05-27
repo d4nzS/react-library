@@ -50,7 +50,7 @@ const Overview: FC<OverviewProps> = ({
                 onClick={selectAvatarHandler}
             >
                 <img
-                    src={avatar ? `${HOST_URL}${avatar}` : defaultAvatarImg}
+                    src={avatar ?? defaultAvatarImg}
                     alt="Avatar"
                     className={classes['overview__avatar']}
                 />

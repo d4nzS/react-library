@@ -15,7 +15,6 @@ import { ReactComponent as MenuIcon } from '../../../assets/icons/list-icon.svg'
 import logoImg from '../../../assets/images/logo.svg';
 import defaultAvatarImg from '../../../assets/images/default-avatar.png';
 import AsyncWrapper from '../../Shared/AsyncWrapper/AsyncWrapper';
-import { HOST_URL } from '../../../api';
 
 const Header: FC = () => {
     const { currentUser } = useRouteLoaderData('root') as { currentUser: Promise<User> };
@@ -82,9 +81,7 @@ const Header: FC = () => {
                     >
                         <span>Привет, {currentUser.firstName}!</span>
                         <img
-                            src={currentUser.avatar
-                                ? `${HOST_URL}${currentUser.avatar}`
-                                : defaultAvatarImg}
+                            src={currentUser.avatar ?? defaultAvatarImg}
                             alt="Avatar"
                             className={classes.header__avatar}
                         />

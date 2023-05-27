@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { token } from '../utils/auth';
 
-export const HOST_URL = 'https://strapi.cleverland.by';
+export const HOST_URL = 'https://library-cleverland-2jfze.ondigitalocean.app';
 
 const api = axios.create({ baseURL: HOST_URL });
 
